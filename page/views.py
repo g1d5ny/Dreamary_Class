@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Designer
 
 # Create your views here.
@@ -11,5 +11,4 @@ def introduce(request):
 
 def detail(request, designer_id):
     designer = get_object_or_404(Designer, pk=designer_id)
-    return render(request, 'detail.heml', {'designer' : designer})
-    
+    return render(request, 'detail.html', {'designer' : designer})
