@@ -43,7 +43,7 @@ def update(request, designer_id):
         post.save()
 
         return redirect('detail', post.id)
-        
+
     else :
         return render(request, 'update.html', {'designer' : post})
 
